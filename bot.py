@@ -18,6 +18,12 @@ client.remove_command('help')
 async def on_ready():
     print('Bot is ready and comected to discord!')
     
+@client.event()
+async def on_member_join(member):
+    role = discord.utils.get(member.server.roles, name = "Nováčik")
+    await client.add_roles(member, role)
+
+    
 @client.command()
 async def hosting():
     r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
