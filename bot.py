@@ -12,6 +12,7 @@ from discord.voice_client import VoiceClient
 from discord import Game, Embed, Color, Status, ChannelType
 
 client = commands.Bot(command_prefix = '?')
+client.remove_command('help')
 
 @client.event
 async def on_ready():
