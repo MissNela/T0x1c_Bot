@@ -11,9 +11,9 @@ import time
 from discord.voice_client import VoiceClient
 from discord import Game, Embed, Color, Status, ChannelType
 
-client = commands.Bot(command_prefix = '/')
+client = commands.Bot(command_prefix = '?')
 
-@client.event()
+@client.event
 async def on_ready():
     print('Bot is ready and comected to discord!')
     
