@@ -36,6 +36,7 @@ async def help():
     embed.set_author(name='Help')
     
     embed.add_field(name = '``Žádné příkazy nebily nalezeny! (Zatim)`` ',value ='Support Server: https://discord.gg/V6EA2M',inline = False)
+    await client.say(embed=embed)
     
 @client.event
 async def on_member_join(member):
