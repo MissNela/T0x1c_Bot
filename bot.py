@@ -18,7 +18,7 @@ client.remove_command('help')
 async def on_ready():
     print('Bot is ready and comected to discord!')
     
-@client.event()
+@client.event
 async def on_member_join(member):
     role = discord.utils.get(member.server.roles, name = "Nováčik")
     await client.add_roles(member, role)
